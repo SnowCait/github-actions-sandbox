@@ -11,21 +11,21 @@ jobs:
     runs-on: ubuntu-20.04
     timeout-minutes: 5
     env:
-      TEXTUREPACKER_TAG: ghcr.io/snowcait/texturepacker:latest
+      TEXTUREPACKER_TAG: ghcr.io/snowcait/texturepacker:5.5.0
 
     steps:
 #       - run: ls -la
 #       - name: Pull
 #         run: docker pull ${TEXTUREPACKER_TAG}
 #       - run: docker images
-      - name: License agreement
-        run: docker run ${TEXTUREPACKER_TAG} TexturePacker
-#       - name: Help
-#         run: docker run ${TEXTUREPACKER_TAG} TexturePacker --help
-#       - name: Version
-#         run: docker run ${TEXTUREPACKER_TAG} TexturePacker --version
-#       - name: License
-#         run: docker run ${TEXTUREPACKER_TAG} TexturePacker --license-info
+#       - name: License agreement
+#         run: docker run ${TEXTUREPACKER_TAG} TexturePacker
+      - name: Help
+        run: docker run ${TEXTUREPACKER_TAG} TexturePacker --help
+      - name: Version
+        run: docker run ${TEXTUREPACKER_TAG} TexturePacker --version
+      - name: License
+        run: docker run ${TEXTUREPACKER_TAG} TexturePacker --license-info
 #       - name: License
 #         run: docker run ${TEXTUREPACKER_TAG} TexturePacker --activate-license ${LICENSE_KEY} --license-info
 #         env:
