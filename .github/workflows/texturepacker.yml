@@ -24,7 +24,14 @@ jobs:
         run: docker run ${TEXTUREPACKER_TAG} TexturePacker --version
       - name: License
         run: docker run ${TEXTUREPACKER_TAG} TexturePacker --license-info
-      - name: License
-        run: docker run ${TEXTUREPACKER_TAG} TexturePacker --activate-license ${LICENSE_KEY} --license-info
-        env:
-          LICENSE_KEY: ${{ secrets.TEXTUREPACKER_LICENSE_KEY }}
+#       - name: License
+#         run: docker run ${TEXTUREPACKER_TAG} TexturePacker --activate-license ${LICENSE_KEY} --license-info
+#         env:
+#           LICENSE_KEY: ${{ secrets.TEXTUREPACKER_LICENSE_KEY }}
+#       - name: Spritesheet
+#         run: |
+#           docker run ${TEXTUREPACKER_TAG} \
+#           --mount type=bind,source=/tmp/spritesheets,target=/spritesheets \
+#           TexturePacker --activate-license ${LICENSE_KEY} /spritesheets/*.tps
+#         env:
+#           LICENSE_KEY: ${{ secrets.TEXTUREPACKER_LICENSE_KEY }}
