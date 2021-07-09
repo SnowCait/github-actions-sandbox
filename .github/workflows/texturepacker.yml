@@ -24,9 +24,9 @@ jobs:
         run: docker run ${TEXTUREPACKER_TAG} TexturePacker --help
       - name: Version
         run: docker run ${TEXTUREPACKER_TAG} TexturePacker --version
-      - name: License
+      - name: License (Not activated)
         run: docker run ${TEXTUREPACKER_TAG} TexturePacker --license-info
-#       - name: License
+#       - name: License (Activated)
 #         run: docker run ${TEXTUREPACKER_TAG} TexturePacker --activate-license ${LICENSE_KEY} --license-info
 #         env:
 #           LICENSE_KEY: ${{ secrets.TEXTUREPACKER_LICENSE_KEY }}
