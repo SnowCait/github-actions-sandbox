@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-20.04
     timeout-minutes: 5
     env:
-      TEXTUREPACKER_TAG: ghcr.io/snowcait/texturepacker:5.5.0
+      TEXTUREPACKER_TAG: ghcr.io/snowcait/texturepacker:latest
 
     steps:
 #       - run: ls -la
